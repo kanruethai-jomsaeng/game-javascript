@@ -15,6 +15,11 @@ var colorDisplay = document.getElementById("colorDisplay");
 var messageDisplay = document.getElementById("message");
 var h1 = document.querySelector("h1");
 var resetButton = document.getElementById("reset");
+var modeButtons = document.querySelectorAll(".mode");
+
+for(var i = 0; i < modeButtons.length; i++){
+  
+}
 var easyBtn = document.querySelector("#easyBtn");
 var hardBtn = document.querySelector("#hardBtn");
 
@@ -53,6 +58,8 @@ resetButton.addEventListener("click", function(){
   colors = generateRandomColors(numSquares);
   pickedColor = pickColor();
   colorDisplay.textContent = pickedColor;
+  this.textContent = "new colors"
+  messageDisplay.textContent = "";
   for(var i = 0; i < squares.length; i++){
     squares[i].style.backgroundColor = colors[i];
     h1.style.backgroundColor = "#232323";
